@@ -37,6 +37,10 @@ public class CharacterEncodingFilter extends HttpFilter implements Filter {
 		request.setCharacterEncoding("utf-8");
 		
 		chain.doFilter(request, response);
+		
+		request.setCharacterEncoding("utf-8");
+		
+		
 	}
 
 	
