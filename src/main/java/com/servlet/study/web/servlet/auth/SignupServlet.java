@@ -34,7 +34,6 @@ public class SignupServlet extends HttpServlet {
 	IOException {
 		
 	System.out.println("Post 요청?");
-	request.setCharacterEncoding("utf-8");
 	
 	String id = request.getParameter("user_id");
 	String password = request.getParameter("user_password");
