@@ -22,6 +22,9 @@ public class SignupServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		System.out.println("Get 요청?");
+		request.getRequestDispatcher
+		("/WEB-INF/views/auth/signup.jsp")
+		.forward(request, response);
 		
 	}
 
@@ -31,6 +34,17 @@ public class SignupServlet extends HttpServlet {
 	IOException {
 		
 	System.out.println("Post 요청?");
+	request.setCharacterEncoding("utf-8");
+	
+	String id = request.getParameter("user_id");
+	String password = request.getParameter("user_password");
+	String name = request.getParameter("user_name");
+	String email = request.getParameter("user_email");
+	
+	System.out.println("아이디: " + id);
+	System.out.println("비밀번호: " + password);
+	System.out.println("이름: " + name);
+	System.out.println("이메일: " + email);
 		
 	}
 
