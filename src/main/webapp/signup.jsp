@@ -23,7 +23,7 @@
 </head>
 
 <body>
-	<form action="/signup-service.jsp">
+	<form method="post" action="/signup-service.jsp">
 	<table>
 		<thead>
 			<tr>
