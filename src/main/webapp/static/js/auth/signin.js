@@ -32,6 +32,13 @@ function send() {
 		dataType: "json",
 		success: (response) => {
 			
+			if(response.status){
+				alert("로그인 성공");
+				
+			}else{
+				alert("사용자의 정보를 확인해 주세요.");
+			}
+			
 		},
 		error: (error) => {
 			console.log(error);
