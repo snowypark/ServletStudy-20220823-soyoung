@@ -31,10 +31,10 @@ function send(user) {
 			alert("회원가입 성공.");
 			console.log(response);
 			document.querySelector("body").innerHTML = `
-				<h1>${response.id}</h1>
-				<h1>${response.pw}</h1>
-				<h1>${response.name}</h1>
-				<h1>${response.email}</h1>
+				<h1>${response.userId}</h1>
+				<h1>${response.userPassword}</h1>
+				<h1>${response.userName}</h1>
+				<h1>${response.userEmail}</h1>
 			
 			`
 		},
