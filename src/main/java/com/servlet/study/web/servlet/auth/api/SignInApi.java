@@ -1,6 +1,7 @@
 package com.servlet.study.web.servlet.auth.api;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -32,7 +33,7 @@ public class SignInApi extends HttpServlet {
 
 		Gson jsonUser = new GsonBuilder().setPrettyPrinting().create();
 		
-		JsonObject jsonObject = jsonUser.fromJson(userJson, JsonObject.class);
+		Map<String, Object> jsonObject = jsonUser.fromJson(userJson, Map.class);
 		
 		String userId = jsonObject.get("userId").toString();
 		String userPassword = jsonObject.get("userPassword").toString();
